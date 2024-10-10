@@ -27,5 +27,3 @@ Or use:
 ```{r eval=FALSE}
 ?bookdown::gitbook
 ```
-
-
