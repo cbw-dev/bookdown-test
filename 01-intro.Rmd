@@ -1,11 +1,66 @@
-# Hello bookdown 
+# Testing Callout Blocks
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+::: {#hello .greeting .message style="color: red;"}
+Hello **world**!
+:::
 
-## A section
+::: {.verbatim data-latex=""}
+We show some _verbatim_ text here.
+:::
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
 
-### An unnumbered section {-}
+:::: {.center data-latex=""}
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+::: {.minipage data-latex="{.5\linewidth}"}
+This paragraph will be centered on the page, and
+its width is 50% of the width of its parent element.
+:::
+
+::::
+
+:::: {.center data-latex=""}
+
+::: {.minipage data-latex="{.5\linewidth}"}
+This paragraph will be centered on the page, and
+its width is 50% of the width of its parent element.
+:::
+
+::::
+
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**NOTICE!**
+:::
+
+Thank you for noticing this **new notice**! Your noticing it has
+been noted, and _will be reported to the authorities_!
+::::
+
+
+
+<!-- ::: {.infobox .caution data-latex="{caution}"} -->
+<!-- ::: {.center data-latex=""} -->
+<!-- **NOTICE!** -->
+<!-- ::: -->
+<!-- Thank you for noticing this **new notice**! Your noticing it has -->
+<!-- been noted, and _will be reported to the authorities_! -->
+<!-- ::: -->
+
+<!-- :::: {.infobox .important data-latex="important"} -->
+<!-- ::: {.center data-latex=""} -->
+<!-- **NOTICE!** -->
+<!-- ::: -->
+<!-- Thank you for noticing this **new notice**! Your noticing it has -->
+<!-- been noted, and _will be reported to the authorities_! -->
+<!-- :::: -->
+
+<!-- A note box: -->
+
+<!-- ::: {.noteblock data-latex=""} -->
+<!-- Thank you for noticing this **new notice**! Your noticing it has -->
+<!-- been noted, and _will be reported to the authorities_! -->
+<!-- ::: -->
+
+
+
+

@@ -103,6 +103,14 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\usepackage{tcolorbox}
+
+\newtcolorbox{blackbox}{
+  colback=black,
+  colframe=orange,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
 \usepackage{booktabs}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -120,7 +128,7 @@
 
 \title{A Minimal Book Example}
 \author{John Doe}
-\date{2024-10-10}
+\date{2024-12-10}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -146,7 +154,8 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{About}\label{about}
+\chapter*{About}\label{WHATTT}
+\addcontentsline{toc}{chapter}{About}
 
 This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
 
@@ -190,18 +199,47 @@ As you work, you may start a local server to live preview this HTML book. This p
 \end{Highlighting}
 \end{Shaded}
 
-\chapter{Hello bookdown}\label{hello-bookdown}
+\chapter{Testing Callout Blocks}\label{testing-callout-blocks}
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+\phantomsection\label{hello}
+Hello \textbf{world}!
 
-\section{A section}\label{a-section}
+\begin{verbatim}
+We show some \emph{verbatim} text here.
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+\end{verbatim}
 
-\subsection*{An unnumbered section}\label{an-unnumbered-section}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\begin{center}
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\begin{minipage}{.5\linewidth}
+This paragraph will be centered on the page, and
+its width is 50\% of the width of its parent element.
+
+\end{minipage}
+
+\end{center}
+
+\begin{center}
+
+\begin{minipage}{.5\linewidth}
+This paragraph will be centered on the page, and
+its width is 50\% of the width of its parent element.
+
+\end{minipage}
+
+\end{center}
+
+\begin{blackbox}
+
+\begin{center}
+\textbf{NOTICE!}
+
+\end{center}
+
+Thank you for noticing this \textbf{new notice}! Your noticing it has
+been noted, and \emph{will be reported to the authorities}!
+
+\end{blackbox}
 
 \chapter{Cross-references}\label{cross}
 
@@ -249,7 +287,7 @@ See Figure \ref{fig:nice-fig}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{_main_files/figure-latex/nice-fig-1} 
+{\centering \includegraphics[width=0.8\linewidth,alt={Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.}]{_main_files/figure-latex/nice-fig-1} 
 
 }
 
